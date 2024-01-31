@@ -1,0 +1,239 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&display=swap');
+
+/* ----- Variables ----- */
+* {
+    /* ### Colores primarios */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* ### Colores neutrales */
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    /*  (background, headings, buttons) */
+
+    /* ### Tipografia */
+    --Font-size: 15px;
+
+    --Family-Lexend: "Lexend Deca";
+    --Weights: 400;
+
+    --Family-Big-sholders: "Big Shoulders Display";
+    --Weights: 700;
+}
+
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+    background: var(--very-light-gray);
+    color: var(--White-main-heading-stats);
+    font-family: var(--Family-Lexend);
+    line-height: 2;
+}
+
+#column-preview-card {
+    margin: 50px;
+}
+
+
+
+text {
+    line-height: 24%;
+}
+
+.text--white {
+    color: var(--Very-light-gray);
+}
+
+
+.text--orange {
+    color: var(--Bright-orange);
+}
+
+.text--dark-cyan {
+    color: var(--Dark-cyan);
+}
+
+.text--very-dark-cyan {
+    color: var(--Very-dark-cyan);
+}
+
+
+
+
+
+
+footer {
+    text-align: center;
+}
+
+/* classes */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+
+
+/* Set width of each child element to 100% */
+
+
+.card {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--sedans {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--Bright-orange);
+}
+
+.card--suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.card--luxury {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--Very-dark-cyan);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card--orange {}
+
+.card--dark-cyan {}
+
+.card--very-dark-cyan {}
+
+
+.card__title {
+    font-family: var(--Family-Big-sholders);
+    font-size: 3rem;
+    padding: 25px 0 25px 0;
+    text-transform: uppercase;
+}
+
+.card__description {
+    font-family: var(--Family-Lexend);
+    font-size: 1.2rem;
+    color: var(--Transparent-white-paragraphs);
+}
+
+.card__footer {
+    margin-top: 100px;
+}
+
+
+.btn {
+    justify-self: center;
+    border: none;
+    padding: 20px 40px 20px 40px;
+    border-radius: 30px;
+    pointer-events: auto;
+    cursor: pointer;
+    font-weight: var(--Weights-700);
+
+}
+
+
+
+.btn:hover,
+.btn:focus {
+    scale: 1.02;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+.btn:active {
+    scale: .99;
+}
+
+.read-more__text {
+    height: 100px;
+    overflow: hidden;
+}
+
+@media (min-width:375px) {}
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {}
+
+@media (min-width:992px) {
+    #column-preview-card {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        /* packs all the items flush to left, prevents buttons from stretching all the way*/
+        align-items: flex-start;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row>* {
+        width: 100%;
+    }
+
+    .card__description {
+        font-size: 1.3rem;
+    }
+
+    .card--sedans {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .card--luxury {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+/* *********---- DESKTOP ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

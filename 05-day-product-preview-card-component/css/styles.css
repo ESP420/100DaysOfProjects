@@ -1,0 +1,213 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+/* ----- Variables ----- */
+* {
+	/* colores primarios*/
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream-color: hsl(30, 38%, 92%);
+	/* colores neutrales*/
+	--very-dar-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white-color: hsl(0, 0%, 100%);
+	/* fuentes */
+	--fraunces-family: 'Fraunces', serif;
+	--montserrat-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--montserrat-family);
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	background-color: var(--cream-color);
+}
+
+.btn {
+	justify-self: center;
+	width: 100%;
+	border: none;
+	padding: 15px;
+	border-radius: 5px;
+	pointer-events: auto;
+	cursor: pointer;
+
+
+}
+
+.btn:hover {
+	scale: 1.02;
+}
+
+.btn:active {
+	scale: .99;
+}
+
+.card {
+	width: 700;
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-areas: 'header' 'body' 'footer';
+	border-radius: 10px;
+	background-color: var(--white-color);
+
+
+}
+
+.card-header {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	grid-area: header;
+	background-image: url('../images/image-product-mobile.jpg');
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+}
+
+.card-body {
+	padding: 30px;
+	grid-area: body;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+
+}
+
+.type {
+	text-transform: uppercase;
+	color: var(--dark-grayish-blue);
+}
+
+.title {
+	font-family: 'Fraunces', 'sans-serif';
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.description {
+
+	line-height: 1.6;
+	color: var(--dark-grayish-blue);
+}
+
+.prices {
+	font-family: 'Fraunces', 'sans-serif';
+	padding-top: 5px;
+	display: flex;
+	justify-content: baseline;
+	gap: 20px;
+
+
+}
+
+.price {
+
+	font-size: xx-large;
+	color: var(--dark-cyan);
+	font-weight: 700;
+}
+
+.old-price {
+	align-self: center;
+	text-decoration: line-through;
+	color: var(--dark-grayish-blue);
+}
+
+.add-card {
+	border: none;
+	background-color: var(--dark-cyan);
+	;
+	color: var(--white-color);
+
+
+}
+
+.add-card:hover {
+	background-color: #1a4030;
+}
+
+.uppercase-text {
+	text-transform: uppercase;
+}
+
+@media (min-width:375px) {
+	.card {
+		grid-template-columns: 370px;
+	}
+
+	.card-header {
+		height: 250px;
+	}
+}
+
+
+@media (min-width:425px) {}
+
+/* phone */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {
+
+
+	.card {
+		width: 700;
+		grid-template-columns: 300px 300px;
+		border-radius: 25px;
+	}
+
+	.card-header {
+		height: 425px;
+		width: 300px;
+		border-bottom-left-radius: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 0px;
+		background-image: url('../images/image-product-desktop.jpg');
+		background-size: cover;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	.img {
+		height: 400px;
+		width: 300px;
+	}
+
+	.card-body {
+		grid-area: body;
+		grid-column-start: 2;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 1;
+		border-bottom-right-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

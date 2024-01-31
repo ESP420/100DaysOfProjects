@@ -1,0 +1,141 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+4. Créditos ....................... 37
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Montserrat', sans-serif;
+	--body-bg-color: #212020;
+	--card-bg-color: #242323;
+	--text-color: #c2c2c2;
+	
+--footer-bg-color: #1f1e1e;
+	--fb-bg-color: #456da4;
+	--li-bg-color: #0984c6;
+	--ig-bg-color: #006184;
+	--lh-text: 22px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	background-color: var(--body-bg-color);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text-color);
+	line-height: var(--lh-text);
+	font-family: var(--primary-font-family);
+}
+
+img {
+	width: 150px;
+	border-radius: 50%;
+}
+
+
+/* ------------------------
+Diseño: UIDesign Daily🎨
+Desarrollo: Frontend Club🔥
+--------------------------- */
+
+
+.card {
+	background-color: var(--card-bg-color);
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top-right-radius: 2%;
+	border-top-left-radius: 2%;
+
+	
+}
+.card__header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	
+}
+.card__header-logo {
+	margin-top: 30px;
+	border-radius: 50%;
+}
+
+.card__header-title {
+	color: var(--text-color);
+}
+
+.card__header-sub-title {
+	
+	color: var(--text-color);
+	background-color: var(--tag-color);
+	border-radius: 30px;
+}
+.card__body {
+	padding: 0 30px;
+
+	
+}
+.card__body-description {
+	text-align: center;
+	color: var(--text-color);
+}
+
+.card__footer {
+	background-color: var(--footer-bg-color);
+	padding: 20px 0 20px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.social{
+	margin: auto;
+	pointer-events: auto;
+	cursor: pointer;
+	
+}
+.social--tw {
+	color: var(--ig-bg-color);
+
+}
+.social--in {
+	color: var(--li-bg-color);
+
+}
+.social--fb {
+	color: var(--fb-bg-color);
+
+}
+
+
+/* *********---- TABLET ----********* */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

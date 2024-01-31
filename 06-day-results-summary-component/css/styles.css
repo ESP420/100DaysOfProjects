@@ -1,0 +1,291 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+
+/* ----- Variables ----- */
+
+* {
+    /* ### Colores primarios */
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --bg-light-red: hsl(0, 100%, 67%, 10%);
+    --bg-orangey-yellow: hsl(39, 100%, 56%, 10%);
+    --bg-green-teal: hsl(166, 100%, 37%, 10%);
+    --bg-cobalt-blue: hsl(234, 85%, 45%, 10%);
+    /* ## Colores gradientes */
+
+    --Light-slate-blue-bg: hsl(252, 100%, 67%);
+    --Light-royal-blue-bg: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* ### Colores neutrales */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* ### Tipografia */
+    --Font-size-paragraph: 18px;
+    --Family: 'Hanken Grotesk';
+    --Weights: 500, 700, 800
+}
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+    font-family: 'Hanken Grotesk', 'sans-serif';
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: var(--Pale-blue);
+
+
+}
+
+.btn {
+    justify-self: center;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background: linear-gradient(0deg, var(--Light-royal-blue-bg) 0%, var(--Light-slate-blue-bg) 100%);
+    scale: 1.02;
+}
+
+.btn:active {
+    scale: .99;
+}
+
+img {
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-areas: 'header' 'body';
+    background-color: var(--White);
+    border-radius: 25px;
+
+    -webkit-box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
+
+
+}
+
+.card-header {
+    background: linear-gradient(0deg, var(--Light-royal-blue-bg) 0%, var(--Light-slate-blue-bg) 100%);
+    border-radius: 25px;
+    height: 450px;
+    padding: 40px;
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.card-header .title {
+    font-size: x-large;
+    color: var(--Light-lavender);
+    font-weight: 500;
+}
+
+.donut {
+    margin: 10px;
+    border-radius: 50%;
+    height: 240px;
+    width: 220px;
+    background: linear-gradient(0deg, var(--Persian-blue-circle) 0%, var(--Violet-blue-circle) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.progress {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.total {
+    font-size: large;
+    color: var(--Light-lavender);
+}
+
+.sub-title {
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.description {
+    text-align: center;
+    font-size: large;
+    padding: 0 30px;
+    color: var(--Light-lavender);
+}
+
+.card-body {
+    height: 450px;
+    border-bottom-left-radius: 15px;
+    padding: 40px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+
+
+
+
+}
+
+.red-alert-text {
+    color: var(--Light-red);
+}
+
+.yellow-alert-text {
+    color: var(--Orangey-yellow);
+}
+
+.green-alert-text {
+    color: var(--Green-teal);
+}
+
+.blue-alert-text {
+    color: var(--Cobalt-blue);
+}
+
+.alert-advance {
+    color: hsl(224, 30%, 27%, 50%);
+}
+
+.alert-value {
+    color: var(--Dark-gray-blue);
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.next-button {
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    border-radius: 30px;
+    margin-top: 25px;
+    font-size: large;
+}
+
+
+.uppercase-text {
+    text-transform: uppercase;
+}
+
+.alert {
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.alert-icon {
+    padding-right: 15px;
+}
+
+.bg-red {
+    background-color: var(--bg-light-red);
+}
+
+.bg-yellow {
+    background-color: var(--bg-orangey-yellow);
+}
+
+.bg-green {
+    background-color: var(--bg-green-teal);
+}
+
+.bg-blue {
+    background-color: var(--bg-cobalt-blue);
+}
+
+@media (min-width:375px) {}
+
+.card {
+    grid-template-columns: 370px;
+}
+
+@media (min-width:425px) {
+    .card {
+        grid-template-columns: 400px;
+    }
+}
+
+/* *********---- TABLET ----********* */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {
+    #body {
+        height: 100vh;
+    }
+
+    .card {
+        grid-template-columns: 400px 400px;
+        grid-template-areas: 'header body';
+    }
+
+    .card-header {
+        height: 450px;
+    }
+
+    .card-body {
+        height: 450px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

@@ -1,0 +1,314 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Merryweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+	--title-font-family: 'Merryweather', sans-serif;
+	--body-font-family: 'Poppins', sans-serif;
+
+	--body-bg-color: #D2DDF6;
+	--card-bg-color: #F6F9FF;
+	--card-shadow-color: #e4edff;
+	--text-color: #12163C;
+
+	--blue-color-1: #96B3FF;
+	--blue-color-2: #6792FF;
+	--blue-color-3: #4473EA;
+	--blue-color-4: #1A52E1;
+
+	--fs-text: 1rem;
+	--lh-text: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	font-size: var(--fs-text);
+	line-height: var(--lh-text);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+
+/*# Tipografia
+- Family (title): [Merryweather](https://fonts.google.com/specimen/Merryweather)
+- Family (body): [Poppins](https://fonts.google.com/specimen/Poppins) */
+#analytics-card *,
+#analytics-card *::after,
+#analytics-card *::before {
+	box-sizing: border-box;
+}
+
+
+#analytics-card {
+	height: 100vh;
+	background-color: var(--body-bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text-color);
+}
+
+.card {
+	padding: 50px;
+	background-color: var(--card-bg-color);
+	width: fit-content;
+	border-radius: 25px;
+	-webkit-box-shadow: 8px 8px 0px 2px var(--card-shadow-color);
+	-moz-box-shadow: 8px 8px 0px 2px var(--card-shadow-color);
+	box-shadow: 8px 8px 0px 2px var(--card-shadow-color);
+
+
+}
+
+.card_header {
+	padding: 20px;
+}
+
+.card-header-title {
+	padding-bottom: 15px;
+	font-size: xx-large;
+	font-weight: 800;
+}
+
+.card-header-info {
+	padding-bottom: 15px;
+	font-weight: 600;
+}
+
+.card-body {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin-top: 20px;
+
+}
+
+.progress {
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress-info {
+
+	display: flex;
+	flex-direction: column;
+
+
+
+}
+
+.progress-info-title {
+	text-align: left;
+	padding: 5px;
+
+}
+
+.progress-bars {
+	text-align: right;
+	font-weight: 800;
+	position: relative;
+	grid-area: bar;
+	display: grid;
+	grid-template-columns: 150px 50px;
+	grid-template-areas: "title title"
+		" bar value";
+
+}
+
+.progress-title {
+	text-align: left;
+	padding: 5px;
+	grid-area: title;
+}
+
+.progress-bar {
+	text-align: right;
+	padding: 5px;
+	font-weight: 800;
+	grid-area: bar;
+
+}
+
+.progress-value {
+	text-align: right;
+	padding: 5px;
+	font-weight: 800;
+	grid-area: value;
+}
+
+.progress-info-more {
+	padding: 15px;
+	text-align: right;
+	color: #3363d0;
+}
+
+.skillbars {
+	padding: 0;
+	width: 100%;
+	float: right;
+	display: grid;
+	position: absolute;
+	top: 12%;
+}
+
+.skillbars .bar {
+	padding: 0 .5em;
+	position: relative;
+	color: white;
+	text-transform: uppercase;
+
+}
+
+.skillbars .bar {
+	text-align: right;
+}
+
+
+.skillbars .bar span {
+	color: var(--text-color);
+	text-transform: uppercase;
+	z-index: 300;
+	font-size: 1em;
+}
+
+.skillbars .bar:after {
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	content: '';
+}
+
+
+.skillbars .bar:after {
+	right: 3px;
+
+}
+
+.skillbars .bar.one:after {
+	height: 5px;
+	border-radius: 25px;
+	background: var(--blue-color-1);
+	width: var(--first-value);
+}
+
+.skillbars .bar.two:after {
+	height: 5px;
+	border-radius: 25px;
+	background: var(--blue-color-2);
+	width: var(--second-value);
+}
+
+.skillbars .bar.tree:after {
+	height: 5px;
+	border-radius: 25px;
+	background: var(--blue-color-3);
+	width: var(--third-value);
+}
+
+.skillbars .bar.four:after {
+	height: 5px;
+	border-radius: 25px;
+	background: var(--blue-color-4);
+	width: var(--fourth-value);
+}
+
+
+@media (min-width:576px) {}
+
+@media (min-width:768px) {
+
+	.card-body {
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
+		margin-top: 20px;
+	}
+
+	.progress-info {
+
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.progress-bars {
+		text-align: right;
+		font-weight: 800;
+		position: relative;
+		grid-area: bar;
+		display: grid;
+		grid-template-columns: auto 200px 50px;
+		grid-template-areas: "title bar value";
+
+	}
+
+	.progress-title {
+		text-align: left;
+		padding: 5px;
+		grid-area: title;
+	}
+
+	.progress-bar {
+		text-align: right;
+		padding: 5px;
+		font-weight: 800;
+		grid-area: bar;
+
+	}
+
+	.progress-value {
+		text-align: left;
+		padding: 5px;
+		font-weight: 800;
+		grid-area: value;
+	}
+
+	.progress-info-more {
+		text-align: right;
+		width: 100%;
+		color: #3363d0;
+	}
+
+}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}
+
+
+
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

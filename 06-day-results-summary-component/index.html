@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nombre del autor">
+    <meta name="description" content="Descripcion del proyecto">
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Results Summary Component</title>
+</head>
+
+<body>
+    <!-- Marcado HTML -->
+    <div id='results-summary-card'>
+        <div class="card">
+            <div class="card-header">
+                <p class="title">Your Result</p>
+                <div class="donut">
+                    <p class="progress">76 </p>
+                    <p class="total">of 100</p>
+                </div>
+                <p class="sub-title">Great</p>
+
+                <p class="description">You scored higher than 65% of the people who
+                    have taken these tests.</p>
+            </div>
+            <div class="card-body">
+                <p class="title">Summary</p>
+                <div class="bg-red alert">
+                    <p class="red-alert-text"><img class="img" src="images/icon-reaction.svg" alt="reaction">Reaction
+                    </p>
+                    <p class="alert-advance"><span class="alert-value">80</span> / 100</p>
+                </div>
+                <div class="bg-yellow alert">
+                    <p class="yellow-alert-text"><img class="img" src="images/icon-memory.svg" alt="memory">Memory</p>
+                    <p class="alert-advance"><span class="alert-value">92</span> / 100</p>
+                </div>
+                <div class="bg-green alert">
+                    <p class="green-alert-text"><img class="img" src="images/icon-verbal.svg" alt="verbal"></i>Verbal
+                    </p>
+                    <p class="alert-advance"><span class="alert-value">61</span> / 100</p>
+                </div>
+                <div class="bg-blue alert">
+                    <p class="blue-alert-text"><img class="img" src="images/icon-visual.svg" alt="visual"></i>Visual</p>
+                    <p class="alert-advance"><span class="alert-value">72</span> / 100</p>
+                </div>
+
+                <button class="btn next-button">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

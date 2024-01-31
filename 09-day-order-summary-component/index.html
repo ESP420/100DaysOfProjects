@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nombre del autor">
+    <meta name="description" content="Descripcion del proyecto">
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Order Summary Component</title>
+</head>
+
+<body>
+
+    <!-- Marcado HTML -->
+    <section id="order-summary-card">
+        <div class="card">
+            <div class="card__header">
+                <img class="img" src="images/illustration-hero.svg" alt="illustration-hero">
+            </div>
+            <div class="card__body">
+                <p class="card__body-title">Order Summary </p>
+                <p class="card__body-description">You can now listen to millions of songs, audiobooks, and podcasts on
+                    any device anywhere you like!
+                </p>
+                <div class="plan">
+                    <div class="plan__price">
+                        <div>
+                            <img class="plan__icon" src="images/icon-music.svg" alt="icon music">
+                        </div>
+                        <div>
+                            <p class="plan__price-name">Annual Plan</p>
+                            <p class="plan__price-price">$59.99/year</p>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="plan__change">Change</a>
+                </div>
+            </div>
+            <div class="card__footer">
+                <button id="payment-button" class="btn btn--primary btn--primary--hover">Proceed to Payment</button>
+                <button class="btn btn--default  btn--default--hover">Cancel Order</button>
+            </div>
+        </div>
+    </section>
+    <!-- toast payment -->
+    <div class="toast">
+
+        <div class="toast__content">
+            <i class="fas fa-solid fa-check  toast--check"></i>
+
+            <div class="toast__message">
+                <span class="toast__text toast__text-1">Success</span>
+                <span class="text text-2">Your payment has been </span>
+                <span class="text text-2"> successfully processed</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark toast__close toast__close--hover"></i>
+        <div class="toast__progress toast__progress--active"></div>
+    </div>
+    <!-- end toast payment -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

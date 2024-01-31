@@ -1,0 +1,144 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+
+@import url('https://fonts.googleapis.com/css?family=Outfit&display=swap');
+
+/* ----- Variables ----- */
+
+/* ### Colores primarios */
+* {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* ### Colores neutrales */
+    --Very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* ### Tipografía */
+    --Font-size-paragraph: 18px;
+    --Family: "Outfit";
+    --Weights-300: Light;
+    --Weights-400: normal;
+    --Weights-600: 600;
+}
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+#qr-code-card {
+    font-family: var(--Family);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--Font-size-paragraph);
+    background-color: var(--Soft-blue);
+
+}
+
+
+.btn {
+    justify-self: center;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    pointer-events: auto;
+    cursor: pointer;
+
+
+}
+
+.btn:hover {
+    scale: 1.02;
+}
+
+.btn:active {
+    scale: .99;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 260px;
+    grid-template-areas: 'header' 'body';
+    background-color: var(--White);
+    border-radius: 25px;
+    padding: 20px;
+
+
+
+}
+
+
+img {
+    width: 260px;
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 20px 5px;
+
+
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: var(--Weights-600);
+    padding: 0 10px 20px 10px;
+}
+
+.description {
+    text-align: center;
+    padding: 0 15px;
+    font-weight: var(--Weights-400);
+    color: rgb(160, 160, 160);
+}
+
+@media (min-width:375px) {
+
+    .card {
+        grid-template-columns: 300px;
+    }
+
+    img {
+        width: 300px;
+        border-radius: 15px;
+    }
+}
+
+
+@media (min-width:425px) {
+    .card {
+        grid-template-columns: 350px;
+    }
+
+    img {
+        width: 350px;
+        border-radius: 15px;
+    }
+}
+
+/* *********---- TABLET ----********* */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}

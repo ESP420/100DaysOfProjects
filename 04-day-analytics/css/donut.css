@@ -1,0 +1,235 @@
+.donut {
+  box-sizing: border-box;
+  --donut-size: 130px;
+  --donut-border-width: 13px;
+  --donut-spacing: 0;
+  --donut-spacing-color: 255, 255, 255;
+  --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+  --donut-label-size: calc(var(--donut-size) - var(--donut-border-width) - 20px);
+  --donut-label-font-size: calc(var(--donut-size) / var(--donut-border-width) + 50px);
+  --label-color: #172354;
+  --animation-speed: 2s;
+  --countTo: 100;
+  border-radius: 50%;
+  height: var(--donut-size);
+  width: var(--donut-size);
+  position: relative;
+  z-index: 1;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+.donut__label {
+  left: 50%;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.donut__label .donut__label__heading {
+  font-size: var(--donut-label-font-size) px;
+  font-weight: 600;
+  color: var(--label-color);
+}
+.donut__label .donut__label__sub {
+  color: #666666;
+  font-size: 75%;
+  letter-spacing: 0.05em;
+}
+
+.donut__slice {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.donut__slice::before, .donut__slice::after {
+  border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.donut__slice__first {
+  --first-start: 0;
+}
+
+.donut__slice__first::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  animation: first-anim-before var(--animation-speed) forwards;
+}
+
+@keyframes first-anim-before {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--first-start) + 45deg));
+  }
+}
+.donut__slice__first::after {
+  border-top-color: #96b3ff;
+  border-right-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.25)));
+  border-bottom-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.5)));
+  border-left-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.75)));
+  animation: first-anim var(--animation-speed) forwards;
+}
+
+@keyframes first-anim {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+  }
+}
+.donut__slice__second {
+  --second-start: calc(var(--first));
+  --second-check: max(calc(var(--second-start) - 0.5), 0);
+  clip-path: inset(0 calc(50% * var(--second-check) / var(--second-check)) 0 0);
+}
+
+.donut__slice__second::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  animation: second-anim-before var(--animation-speed) forwards;
+}
+
+@keyframes second-anim-before {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--second-start) + 45deg));
+  }
+}
+.donut__slice__second::after {
+  border-top-color: #6792ff;
+  border-right-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.25)));
+  border-bottom-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.5)));
+  border-left-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.75)));
+  animation: second-anim var(--animation-speed) forwards;
+}
+
+@keyframes second-anim {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+  }
+}
+.donut__slice__third {
+  --third-start: calc(var(--first) + var(--second));
+  --third-check: max(calc(var(--third-start) - 0.5), 0);
+  clip-path: inset(0 calc(50% * var(--third-check) / var(--third-check)) 0 0);
+}
+
+.donut__slice__third::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  animation: third-anim-before var(--animation-speed) forwards;
+}
+
+@keyframes third-anim-before {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--third-start) + 45deg));
+  }
+}
+.donut__slice__third::after {
+  border-top-color: #4473ea;
+  border-right-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.25)));
+  border-bottom-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.5)));
+  border-left-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.75)));
+  animation: third-anim var(--animation-speed) forwards;
+}
+
+@keyframes third-anim {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+  }
+}
+.donut__slice__fourth {
+  --fourth-start: calc(var(--first) + var(--second) + var(--third));
+  --fourth-check: max(calc(var(--fourth-start) - 0.5), 0);
+  clip-path: inset(0 calc(50% * var(--fourth-check) / var(--fourth-check)) 0 0);
+}
+
+.donut__slice__fourth::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  animation: fourth-anim-before var(--animation-speed) forwards;
+}
+
+@keyframes fourth-anim-before {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--fourth-start) + 45deg));
+  }
+}
+.donut__slice__fourth::after {
+  border-top-color: #1a52e1;
+  border-right-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.25)));
+  border-bottom-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.5)));
+  border-left-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.75)));
+  animation: fourth-anim var(--animation-speed) forwards;
+}
+
+@keyframes fourth-anim {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
+  }
+}
+.donut__slice__fifth {
+  --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
+  --fifth-check: max(calc(var(--fifth-start) - 0.5), 0);
+  clip-path: inset(0 calc(50% * var(--fifth-check) / var(--fifth-check)) 0 0);
+}
+
+.donut__slice__fifth::before {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  animation: fifth-anim-before var(--animation-speed) forwards;
+}
+
+@keyframes fifth-anim-before {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
+  }
+}
+.donut__slice__fifth::after {
+  border-top-color: #172354;
+  border-right-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.25)));
+  border-bottom-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.5)));
+  border-left-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.75)));
+  animation: fifth-anim var(--animation-speed) forwards;
+}
+
+@keyframes fifth-anim {
+  from {
+    transform: rotate(360deg) scale(0.8);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

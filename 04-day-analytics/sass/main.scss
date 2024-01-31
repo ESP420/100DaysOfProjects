@@ -1,0 +1,152 @@
+$blue-color-1: #96B3FF;
+$blue-color-2: #6792FF;
+$blue-color-3: #4473EA;
+$blue-color-4: #1A52E1;
+
+.donut {
+    box-sizing: border-box;
+    --donut-size: 130px;
+    --donut-border-width: 13px;
+    --donut-spacing: 0;
+    --donut-spacing-color: 255, 255, 255;
+    --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+    --donut-label-size: calc(var(--donut-size) - var(--donut-border-width) - 20px);
+    --donut-label-font-size: calc(var(--donut-size) / var(--donut-border-width) + 50px);
+    --label-color: #172354;
+    --animation-speed: 2s;
+    --countTo: 100;
+    border-radius: 50%;
+    height: var(--donut-size);
+    width: var(--donut-size);
+    position: relative;
+    z-index: 1;
+
+}
+
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.donut__label {
+    left: 50%;
+    line-height: 1.5;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+
+    .donut__label__heading {
+        font-size: var(--donut-label-font-size) px;
+        font-weight: 600;
+        color: var(--label-color);
+    }
+
+    .donut__label__sub {
+        color: #666666;
+        font-size: 75%;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+// Slice
+.donut__slice {
+
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    &::before,
+    &::after {
+        border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+
+    }
+
+}
+
+// Calc colors and data
+$donut-slices: (
+    first: $blue-color-1,
+    second: $blue-color-2,
+    third: $blue-color-3,
+    fourth:$blue-color-4,
+    fifth: #172354
+);
+
+$slides-concat: "";
+
+@each $slice in $donut-slices {
+    $name: nth($slice, 1);
+    $color: nth($slice, 2);
+    $i: index($donut-slices, $slice);
+
+    @if $i >1 {
+        .donut__slice__#{$name} {
+            --#{$name}-start: calc(#{$slides-concat});
+            --#{$name}-check: max(calc(var(--#{$name}-start) - 0.5), 0);
+            clip-path: inset(0 calc(50% * (var(--#{$name}-check) / var(--#{$name}-check))) 0 0);
+        }
+    }
+
+    @else {
+        .donut__slice__#{$name} {
+            --#{$name}-start: 0;
+
+        }
+    }
+
+    .donut__slice__#{$name}::before {
+        border-top-color: rgba(var(--donut-spacing-color),
+                calc(100 * var(--donut-spacing)));
+        animation: #{$name}-anim-before var(--animation-speed) forwards;
+
+    }
+
+    @keyframes #{$name}-anim-before {
+        from {
+            transform: rotate(360deg) scale(0.8);
+        }
+
+        to {
+            transform: rotate(calc(360deg * var(--#{$name}-start) + 45deg));
+        }
+    }
+
+    .donut__slice__#{$name}::after {
+
+        border-top-color: rgba($color, 1);
+        border-right-color: rgba($color, calc(100 * (var(--#{$name}) - 0.25)));
+        border-bottom-color: rgba($color, calc(100 * (var(--#{$name}) - 0.5)));
+        border-left-color: rgba($color, calc(100 * (var(--#{$name}) - 0.75)));
+        animation: #{$name}-anim var(--animation-speed) forwards;
+    }
+
+    @keyframes #{$name}-anim {
+        from {
+            transform: rotate(360deg) scale(0.8);
+        }
+
+        to {
+            transform: rotate(calc(360deg * var(--#{$name}-start) + 45deg + var(--donut-spacing-deg)));
+        }
+    }
+
+    @if $i ==1 {
+        $slides-concat: var(--#{$name});
+    }
+
+    @else {
+        $slides-concat: $slides-concat + " + " + var(--#{$name});
+    }
+}
