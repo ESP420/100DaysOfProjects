@@ -49,7 +49,9 @@ body {
     align-items: center;
 }
 
-#column-preview-card {}
+#column-preview-card {
+    margin-top: 50px;
+}
 
 
 
@@ -198,6 +200,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 0px;
     }
 
     .card {
