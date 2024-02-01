@@ -9,11 +9,163 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 /* ----- Variables ----- */
 
+/* ### Colores primarios */
+* {
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+
+    /* ### Colores neutrales */
+    --Dark_gray: hsl(0, 0%, 59%);
+
+    /* ### Tipografia */
+    --Font_size: 18px;
+    /*  (name and stats) */
+
+    --Family: "Kumbh Sans", sans-serif;
+    /* (https://fonts.google.com/specimen/Kumbh+Sans); */
+    --Weights-700: 700;
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+    min-height: 100vh;
+    font-family: var(--Family);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40vw bottom 40vh, left 30vw top 45vh;
+    background-color: var(--Dark_cyan);
+    line-height: 1.5;
+}
+
+#profile-card {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgba(0 0 0 /0.15);
+}
+
+.card:hover {
+    scale: 1.02;
+}
+
+.card:active {
+    scale: .99;
+}
+
+.card__header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card__header-img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-image: url(../images/bg-pattern-card.svg);
+    width: 300px;
+    height: 120px;
+}
+
+.card__body {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__header-user-img {
+    border-radius: 100%;
+    bottom: -35%;
+    position: absolute;
+}
+
+.img {
+    border: 5px solid white;
+
+    border-radius: 50%;
+
+}
+
+.card__body-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card__body-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card__footer {
+    border-top: 1px solid #ededed;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.stats__value {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stats__text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text--gray {
+    color: var(--Dark_gray);
+    font-weight: 400;
+}
+
+@media (min-width:375px) {
+
+    .card {
+        width: 330px;
+    }
+
+    .card__header-img {
+        background-image: url(../images/bg-pattern-card.svg);
+        width: 330px;
+        height: 155px;
+    }
+
+}
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+@media (min-width:576px) {}
+
+@media (min-width:768px) {
+    body {
+        background-position: right 50vw bottom 40vh, left 50vw top 45vh;
+    }
+}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1400px) {}
