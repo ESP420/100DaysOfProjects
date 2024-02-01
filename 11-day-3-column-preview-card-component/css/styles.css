@@ -44,11 +44,12 @@ body {
     color: var(--White-main-heading-stats);
     font-family: var(--Family-Lexend);
     line-height: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#column-preview-card {
-    margin: 50px;
-}
+#column-preview-card {}
 
 
 
@@ -217,7 +218,7 @@ footer {
     }
 
     .card__description {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .card--sedans {
