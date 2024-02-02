@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768px" height="476px" viewBox="0 0 767 476" version="1.1">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="767" height="476" style="fill:rgb(0%,0%,0%);fill-opacity:0.0509804;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="1" y1="0.69237" x2="0.09399" y2="0.32159" gradientTransform="matrix(767,0,0,476,0,0)">
+<stop offset="0" style="stop-color:rgb(54.117647%,26.27451%,53.72549%);stop-opacity:0;"/>
+<stop offset="1" style="stop-color:rgb(31.764706%,12.54902%,31.764706%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(31.764706%,12.54902%,31.764706%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(31.764706%,12.54902%,31.764706%);stop-opacity:1;"/>
+</linearGradient>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="767" height="476"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip1)">
+<path style=" stroke:none;fill-rule:evenodd;fill:url(#linear0);" d="M 0 476 C 52.5625 367.125 152 298.28125 298.316406 269.472656 C 517.789062 226.261719 434.707031 182.671875 542.535156 96.171875 C 614.417969 38.503906 689.238281 6.449219 767 0 L 767 476 Z M 0 476 "/>
+</g>
+</defs>
+<g id="surface1">
+<use xlink:href="#surface5" mask="url(#mask0)"/>
+</g>
+</svg>
