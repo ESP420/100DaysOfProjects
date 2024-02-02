@@ -9,7 +9,7 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 
 /* ----- Variables ----- */
@@ -18,12 +18,12 @@ Tabla de contenidos:
 	--body-bg-color: #212020;
 	--card-bg-color: #242323;
 	--text-color: #c2c2c2;
-	
---footer-bg-color: #1f1e1e;
+
+	--footer-bg-color: #1f1e1e;
 	--fb-bg-color: #456da4;
 	--li-bg-color: #0984c6;
 	--ig-bg-color: #006184;
-	--lh-text: 22px;
+	--lh-text: 1.5;
 }
 
 
@@ -32,13 +32,12 @@ Tabla de contenidos:
 /* ----------------------------- */
 body {
 	background-color: var(--body-bg-color);
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	min-height: 100vh;
 	color: var(--text-color);
 	line-height: var(--lh-text);
 	font-family: var(--primary-font-family);
+	display: flex;
+	align-items: center;
 }
 
 img {
@@ -51,11 +50,14 @@ img {
 Diseño: UIDesign Daily🎨
 Desarrollo: Frontend Club🔥
 --------------------------- */
-
+#profile-card {
+	width: 300px;
+	margin: 0 auto;
+}
 
 .card {
 	background-color: var(--card-bg-color);
-	width: 350px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,38 +65,47 @@ Desarrollo: Frontend Club🔥
 	border-top-right-radius: 2%;
 	border-top-left-radius: 2%;
 
-	
+
 }
+
+
+
 .card__header {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	
+
 }
+
 .card__header-logo {
 	margin-top: 30px;
 	border-radius: 50%;
 }
 
 .card__header-title {
+	padding: 20px;
 	color: var(--text-color);
 }
 
 .card__header-sub-title {
-	
+
 	color: var(--text-color);
-	background-color: var(--tag-color);
+	background-color: var(--footer-bg-color);
+	padding: 10px 20px;
 	border-radius: 30px;
 }
+
 .card__body {
 	padding: 0 30px;
 
-	
+
 }
+
 .card__body-description {
+	padding: 20px;
+	padding-bottom: 30px;
 	text-align: center;
 	color: var(--text-color);
 }
@@ -108,25 +119,48 @@ Desarrollo: Frontend Club🔥
 	justify-content: space-between;
 
 }
-.social{
+
+.social {
 	margin: auto;
 	pointer-events: auto;
 	cursor: pointer;
-	
+
 }
+
+.social--icon:hover {
+	scale: 1.5;
+}
+
 .social--tw {
 	color: var(--ig-bg-color);
 
 }
+
 .social--in {
 	color: var(--li-bg-color);
 
 }
+
 .social--fb {
 	color: var(--fb-bg-color);
 
 }
 
+@media (min-width:375px) {
+
+	#profile-card {
+		width: 350px;
+	}
+
+}
+
+@media (min-width:425px) {
+
+	#profile-card {
+		width: 400px;
+	}
+
+}
 
 /* *********---- TABLET ----********* */
 @media (min-width:576px) {}
