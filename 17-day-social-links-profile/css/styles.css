@@ -9,13 +9,143 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 
 /* ----- Variables ----- */
 
+* {
+    /*  ### Colores primarios */
+    --Green: hsl(75, 94%, 57%);
 
+    /* ### Colores neutrales */
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark_Grey: hsl(0, 0%, 12%);
+    --Off_Black: hsl(0, 0%, 8%);
+
+    /* ### Tipografia */
+    --Font_size: 14px;
+    --Family: "Inter";
+    --Weights: 400, 600, 700;
+
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--Family);
+    background-color: var(--Off_Black);
+    font-size: var(--Font_size);
+    color: var(--White);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+
+#social-links-profile {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.card {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--Dark_Grey);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.card__logo {
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.card__title {
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.card__subtitle {
+    color: var(--Green);
+    font-weight: 600;
+}
+
+.card__description {
+    padding: 20px 0 15px 0;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.card__btn {
+    background-color: var(--Grey);
+}
+
+.card__btn {
+    align-self: center;
+    padding: 13px 0;
+    border: none;
+    width: 100%;
+    border-radius: 7px;
+    color: var(--White);
+
+}
+
+.card__btn:hover {
+    cursor: pointer;
+    background: var(--Green);
+    color: var(--Off_Black);
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+@media (min-width:375px) {
+    #social-links-profile {
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+}
+
+
+@media (min-width:425px) {
+    .card {
+        padding: 40px;
+    }
+
+    #social-links-profile {
+        width: 370px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {}
+
+@media (min-width:992px) {}
+
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1440px) {}
