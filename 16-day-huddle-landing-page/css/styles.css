@@ -9,11 +9,265 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
 
 /* ----- Variables ----- */
+/* ### Colores primarios */
+* {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
 
+    /* ### Tipografia
+### Headings */
+    --Family-header: "Poppins";
+    --Weights-400: 400;
+    --Weights-600: 600;
+    /* ### Body */
+    --Family-body: "Open-Sans";
+    /* 400 */
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--Family-header);
+    background-color: var(--Violet);
+    color: white;
+    ;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+
+}
+
+
+#hero {
+    width: 95vw;
+    max-width: 1400px;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+.header {}
+
+.logo {
+    width: 150px;
+}
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 
+.ilustration {
+    background-image: url(../images/illustration-mockups.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 490px;
+} */
+.ilustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ilustration img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info {
+
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.tittle--margin-30 {
+    margin-top: 40px;
+}
+
+.description {
+    color: rgb(220 204 243);
+    padding: 20px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn {
+    align-self: center;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 25px;
+    width: fit-content;
+    box-shadow: 0px 3px 15px 1px hsla(0, 0%, 0%, 0.5);
+
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    background: var(--Soft-Magenta);
+    color: var(--white);
+    transition: all 0.4s ease-in-out;
+}
+
+.footer__button:hover,
+.footer__button:focus {
+    cursor: pointer;
+    color: var(--Soft-Magenta);
+    border: 1px solid var(--Soft-Magenta);
+    transition: all 0.4s ease-in-out;
+}
+
+footer {
+    margin-top: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer__button {
+    width: 40px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+}
+
+@media (min-width:375px) {}
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {
+    .btn {
+        padding: 20px 60px;
+        border-radius: 35px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        gap: 20px;
+    }
+
+    .ilustration img {
+        width: 60%;
+    }
+
+    body {
+        background-image: url(../images/bg-desktop.svg);
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.125rem;
+    }
+
+
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .btn {
+        align-self: flex-start;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .title {
+        text-align: left;
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+
+    .description {
+        padding: 20px 0 20px 0;
+    }
+
+    .ilustration {
+        width: 58%;
+    }
+
+    .ilustration img {
+        width: 90%;
+    }
+
+    .info {
+        text-align: left;
+        width: 42%;
+    }
+}
+
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1440px) {
+    .description {
+        padding: 20px 20px 20px 0;
+    }
+}
+
+
+/* background */
+@media (max-width:425px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:1400px) {}
