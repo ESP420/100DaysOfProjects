@@ -5,7 +5,7 @@ $blue-color-4: #1A52E1;
 
 .donut {
     box-sizing: border-box;
-    --donut-size: 130px;
+    --donut-size: 160px;
     --donut-border-width: 13px;
     --donut-spacing: 0;
     --donut-spacing-color: 255, 255, 255;
@@ -77,11 +77,10 @@ $blue-color-4: #1A52E1;
 
 // Calc colors and data
 $donut-slices: (
-    first: $blue-color-1,
-    second: $blue-color-2,
-    third: $blue-color-3,
-    fourth:$blue-color-4,
-    fifth: #172354
+    first: $blue-color-2,
+    second: $blue-color-3,
+    third: $blue-color-4,
+    fourth:$blue-color-1,
 );
 
 $slides-concat: "";

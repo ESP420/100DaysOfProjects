@@ -1,6 +1,6 @@
 .donut {
   box-sizing: border-box;
-  --donut-size: 130px;
+  --donut-size: 160px;
   --donut-border-width: 13px;
   --donut-spacing: 0;
   --donut-spacing-color: 255, 255, 255;
@@ -76,10 +76,10 @@
   }
 }
 .donut__slice__first::after {
-  border-top-color: #96b3ff;
-  border-right-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.25)));
-  border-bottom-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.5)));
-  border-left-color: rgba(150, 179, 255, calc(100 * (var(--first) - 0.75)));
+  border-top-color: #6792ff;
+  border-right-color: rgba(103, 146, 255, calc(100 * (var(--first) - 0.25)));
+  border-bottom-color: rgba(103, 146, 255, calc(100 * (var(--first) - 0.5)));
+  border-left-color: rgba(103, 146, 255, calc(100 * (var(--first) - 0.75)));
   animation: first-anim var(--animation-speed) forwards;
 }
 
@@ -111,10 +111,10 @@
   }
 }
 .donut__slice__second::after {
-  border-top-color: #6792ff;
-  border-right-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.25)));
-  border-bottom-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.5)));
-  border-left-color: rgba(103, 146, 255, calc(100 * (var(--second) - 0.75)));
+  border-top-color: #4473ea;
+  border-right-color: rgba(68, 115, 234, calc(100 * (var(--second) - 0.25)));
+  border-bottom-color: rgba(68, 115, 234, calc(100 * (var(--second) - 0.5)));
+  border-left-color: rgba(68, 115, 234, calc(100 * (var(--second) - 0.75)));
   animation: second-anim var(--animation-speed) forwards;
 }
 
@@ -146,10 +146,10 @@
   }
 }
 .donut__slice__third::after {
-  border-top-color: #4473ea;
-  border-right-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.25)));
-  border-bottom-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.5)));
-  border-left-color: rgba(68, 115, 234, calc(100 * (var(--third) - 0.75)));
+  border-top-color: #1a52e1;
+  border-right-color: rgba(26, 82, 225, calc(100 * (var(--third) - 0.25)));
+  border-bottom-color: rgba(26, 82, 225, calc(100 * (var(--third) - 0.5)));
+  border-left-color: rgba(26, 82, 225, calc(100 * (var(--third) - 0.75)));
   animation: third-anim var(--animation-speed) forwards;
 }
 
@@ -181,10 +181,10 @@
   }
 }
 .donut__slice__fourth::after {
-  border-top-color: #1a52e1;
-  border-right-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.25)));
-  border-bottom-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.5)));
-  border-left-color: rgba(26, 82, 225, calc(100 * (var(--fourth) - 0.75)));
+  border-top-color: #96b3ff;
+  border-right-color: rgba(150, 179, 255, calc(100 * (var(--fourth) - 0.25)));
+  border-bottom-color: rgba(150, 179, 255, calc(100 * (var(--fourth) - 0.5)));
+  border-left-color: rgba(150, 179, 255, calc(100 * (var(--fourth) - 0.75)));
   animation: fourth-anim var(--animation-speed) forwards;
 }
 
@@ -196,40 +196,5 @@
     transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg)));
   }
 }
-.donut__slice__fifth {
-  --fifth-start: calc(var(--first) + var(--second) + var(--third) + var(--fourth));
-  --fifth-check: max(calc(var(--fifth-start) - 0.5), 0);
-  clip-path: inset(0 calc(50% * var(--fifth-check) / var(--fifth-check)) 0 0);
-}
 
-.donut__slice__fifth::before {
-  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
-  animation: fifth-anim-before var(--animation-speed) forwards;
-}
-
-@keyframes fifth-anim-before {
-  from {
-    transform: rotate(360deg) scale(0.8);
-  }
-  to {
-    transform: rotate(calc(360deg * var(--fifth-start) + 45deg));
-  }
-}
-.donut__slice__fifth::after {
-  border-top-color: #172354;
-  border-right-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.25)));
-  border-bottom-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.5)));
-  border-left-color: rgba(23, 35, 84, calc(100 * (var(--fifth) - 0.75)));
-  animation: fifth-anim var(--animation-speed) forwards;
-}
-
-@keyframes fifth-anim {
-  from {
-    transform: rotate(360deg) scale(0.8);
-  }
-  to {
-    transform: rotate(calc(360deg * var(--fifth-start) + 45deg + var(--donut-spacing-deg)));
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=donut.css.map */

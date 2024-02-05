@@ -8,8 +8,8 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-@import url("https://fonts.googleapis.com/css?family=Merryweather&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merryweather:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600;700&display=swap");
 
 
 /* ----- Variables ----- */
@@ -38,7 +38,7 @@ Tabla de contenidos:
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
 body {
-	font-family: var(--primary-font-family);
+	font-family: var(--body-font-family);
 	background-color: var(--body-bg-color);
 	color: var(--text-color);
 	font-size: var(--fs-text);
@@ -63,6 +63,7 @@ body {
 
 #analytics-card {
 	height: 100vh;
+	font-size: 1rem;
 	background-color: var(--body-bg-color);
 	display: flex;
 	justify-content: center;
@@ -71,7 +72,7 @@ body {
 }
 
 .card {
-	padding: 50px;
+	padding: 20px;
 	background-color: var(--card-bg-color);
 	width: fit-content;
 	border-radius: 25px;
@@ -87,8 +88,9 @@ body {
 }
 
 .card-header-title {
+	font-family: var(--title-font-family);
 	padding-bottom: 15px;
-	font-size: xx-large;
+	font-size: x-large;
 	font-weight: 800;
 }
 
@@ -134,7 +136,7 @@ body {
 	position: relative;
 	grid-area: bar;
 	display: grid;
-	grid-template-columns: 150px 50px;
+	grid-template-columns: 250px 50px;
 	grid-template-areas: "title title"
 		" bar value";
 
@@ -212,28 +214,28 @@ body {
 .skillbars .bar.one:after {
 	height: 5px;
 	border-radius: 25px;
-	background: var(--blue-color-1);
+	background: var(--blue-color-2);
 	width: var(--first-value);
 }
 
 .skillbars .bar.two:after {
 	height: 5px;
 	border-radius: 25px;
-	background: var(--blue-color-2);
+	background: var(--blue-color-3);
 	width: var(--second-value);
 }
 
 .skillbars .bar.tree:after {
 	height: 5px;
 	border-radius: 25px;
-	background: var(--blue-color-3);
+	background: var(--blue-color-4);
 	width: var(--third-value);
 }
 
 .skillbars .bar.four:after {
 	height: 5px;
 	border-radius: 25px;
-	background: var(--blue-color-4);
+	background: var(--blue-color-1);
 	width: var(--fourth-value);
 }
 
@@ -241,6 +243,9 @@ body {
 @media (min-width:576px) {}
 
 @media (min-width:768px) {
+	.card {
+		padding: 20px;
+	}
 
 	.card-body {
 		display: flex;
@@ -249,8 +254,13 @@ body {
 		margin-top: 20px;
 	}
 
-	.progress-info {
+	.progress {
 
+		margin-top: 10px;
+	}
+
+	.progress-info {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 
@@ -262,7 +272,7 @@ body {
 		position: relative;
 		grid-area: bar;
 		display: grid;
-		grid-template-columns: auto 200px 50px;
+		grid-template-columns: auto 250px 50px;
 		grid-template-areas: "title bar value";
 
 	}
@@ -291,12 +301,26 @@ body {
 	.progress-info-more {
 		text-align: right;
 		width: 100%;
-		color: #3363d0;
+
+	}
+
+	.progress-info-more a {
+		color: var(--blue-color-3);
 	}
 
 }
 
-@media (min-width:992px) {}
+@media (min-width:992px) {
+	.card {
+		padding: 50px;
+	}
+
+	.progress {
+
+		margin-left: 30px;
+		margin-top: 10px;
+	}
+}
 
 /* *********---- Desktop ----********* */
 @media (min-width:1200px) {}

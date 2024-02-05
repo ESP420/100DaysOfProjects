@@ -97,7 +97,7 @@ body {
 }
 
 .tag {
-	padding: 5px;
+	padding: 2px 10px;
 	background-color: var(--text-color);
 	color: var(--white-color);
 	border-radius: 25px;
@@ -125,7 +125,8 @@ body {
 }
 
 .description {
-	padding: 20px 0;
+	font-size: 12px;
+	padding: 10px 0 20px 0;
 	color: gray;
 }
 
@@ -145,7 +146,15 @@ body {
 
 
 .stock {
+	position: relative;
 	padding: 20px 0;
+}
+
+.stock-text {
+	position: absolute;
+	left: -12px;
+	font-size: 12px;
+	font-weight: 600;
 }
 
 .card-footer {
@@ -160,6 +169,7 @@ body {
 	background-color: var(--white-color);
 	border: 1px solid rgb(201, 201, 201);
 	color: var(--text-color);
+	font-weight: 500;
 
 
 }
@@ -174,11 +184,26 @@ body {
 	background-color: var(--white-color);
 	border: 1px solid rgb(201, 201, 201);
 	color: var(--text-color);
+	font-weight: 500
 }
 
 .add-wishlist:hover {
 	color: var(--white-color);
 	background-color: rgb(201, 201, 201);
+}
+
+ul {
+
+	margin-left: 30px;
+}
+
+li {
+	font-size: 31px;
+}
+
+li::marker {
+	color: hsl(158.43deg 100% 42.55%);
+	;
 }
 
 /* *********---- TABLET ----********* */
