@@ -43,8 +43,9 @@ body {
     background: var(--very-light-gray);
     color: var(--White-main-heading-stats);
     font-family: var(--Family-Lexend);
-    line-height: 2;
+    line-height: 1.5;
     display: flex;
+    font-size: var(--Font-size);
     justify-content: center;
     align-items: center;
 }
@@ -55,9 +56,7 @@ body {
 
 
 
-text {
-    line-height: 24%;
-}
+
 
 .text--white {
     color: var(--Very-light-gray);
@@ -100,7 +99,7 @@ footer {
 
 
 .card {
-    padding: 3.2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
 }
@@ -148,7 +147,7 @@ footer {
 }
 
 .card__footer {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -191,7 +190,54 @@ footer {
 /* *********---- TABLET ----********* */
 @media (min-width:576px) {}
 
-@media (min-width:768px) {}
+@media (min-width:768px) {
+    #column-preview-card {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .card {
+        padding: 2rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        /* packs all the items flush to left, prevents buttons from stretching all the way*/
+        align-items: flex-start;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row>* {
+        width: 100%;
+    }
+
+    .card__description {
+        font-size: 1rem;
+    }
+
+    .card--sedans {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .card--luxury {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .card__footer {
+        margin-top: 50px;
+    }
+}
 
 @media (min-width:992px) {
     #column-preview-card {
@@ -204,6 +250,7 @@ footer {
     }
 
     .card {
+        padding: 2.8rem;
         color: white;
         display: flex;
         flex-direction: column;
@@ -222,6 +269,8 @@ footer {
 
     .card__description {
         font-size: 1.2rem;
+
+
     }
 
     .card--sedans {
@@ -234,6 +283,10 @@ footer {
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 0px;
+    }
+
+    .card__footer {
+        margin-top: 80px;
     }
 }
 
