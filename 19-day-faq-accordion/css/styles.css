@@ -10,12 +10,205 @@ Tabla de contenidos:
 
 /* ----- Fuente ----- */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
 
 /* ----- Variables ----- */
+* {
+    /*  ### Colores primarios */
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
 
+    /* ### Tipografia */
+    --Font-size: 16px;
+
+
+    --Family: 'Work Sans', sans-serif;
+
+    --Weights: 400, 600, 700;
+
+}
 
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+    background-image: url(../images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--Family);
+    line-height: 1.5;
+    font-size: var(--Font-size);
+    font-weight: 400;
+    background-color: var(--Light-pink);
+}
+
+#fag-accordion {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 41rem));
+    min-height: 100vh;
+    place-items: start;
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: var(--White);
+    padding: 20px 30px 30px 30px;
+    box-shadow: 0px 5px 30px 1px rgba(52, 23, 56, 0.3);
+}
+
+.card__header {
+    padding-bottom: 10px;
+}
+
+.card__title {
+    padding-left: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header__icon {
+    width: 25px;
+}
+
+.tab {
+
+    border-top: 2px solid var(--Light-pink);
+}
+
+/* Core styles/functionality */
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.30s;
+}
+
+.tab input:checked~.tab__content {
+    max-height: 10rem;
+}
+
+.tab input:checked~.tab__label .tab__icon--plus {
+    display: none;
+
+}
+
+.tab input:checked~.tab__label {
+    color: #ad28eb;
+}
+
+.tab input:checked~.tab__label .tab__icon--minus {
+    display: block;
+}
+
+.tab input~.tab__label .tab__icon--plus {
+    display: block;
+}
+
+.tab input~.tab__label .tab__icon--minus {
+    display: none;
+}
+
+
+/* Visual styles */
+
+.tab__label,
+.tab__close {
+    display: flex;
+    cursor: pointer;
+}
+
+.tab__label {
+    justify-content: space-between;
+    padding: 1.1rem 0;
+    font-weight: 600;
+}
+
+.tab__label-text {
+    padding-right: 25px;
+}
+
+.tab__label:hover,
+.tab__label:focus {
+    color: #ad28eb;
+    outline: none;
+}
+
+.tab__content p {
+    margin: 0;
+    padding: 1rem;
+    color: var(--Grayish-purple);
+    font-weight: 400;
+}
+
+.tab__close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+
+/* Arrow animation */
+.tab input:not(:checked)+.tab__label:hover::after {
+    animation: bounce .5s infinite;
+}
+
+@keyframes bounce {
+    25% {
+        transform: rotate(90deg) translate(.25rem);
+    }
+
+    75% {
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+@media (min-width:375px) {}
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {
+
+    .card__title {
+        font-size: 3rem;
+    }
+
+    .header__icon {
+        width: 35px;
+    }
+}
+
+@media (min-width:992px) {
+    body {
+        background-image: url(../images/background-pattern-desktop.svg);
+    }
+
+}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1440px) {}
+
+
+/* background */
+@media (max-width:425px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:1400px) {}
