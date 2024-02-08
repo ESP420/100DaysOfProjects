@@ -23,7 +23,64 @@
 <body>
 
     <!-- Marcado HTML -->
+    <main>
+        <section id="article-preview">
+            <div class="card">
+                <div class="card__header">
 
+                </div>
+                <div class="card__body">
+                    <h2 class="card__title">Shift the overall look and feel by adding these wonderful touches to
+                        furniture in your home
+                    </h2>
+                    <p class="card__description"> Ever been in a room and felt like something was missing? Perhaps it
+                        felt slightly bare and
+                        uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+                    <div id="contact" class="contact">
+
+                        <div id="slide" class="contact__description">
+                            <img class="contact__img" src="images/avatar-michelle.jpg" width="40" height="40px"
+                                alt="avatar">
+                            <div class="contact__info">
+                                <p class="contact__name">Michelle Appleton</p>
+                                <p class="contact__date">28 Jun 2020</p>
+                            </div>
+                        </div>
+                        <div id="slide-shared" class="contact__shared hide hidden">
+                            <div class="contact__shared-info">
+                                <span id="shared-text">SHARE</span>
+                                <img class="social__icon" src="images/icon-facebook.svg" alt="icon-facebook">
+                                <img class="social__icon" src="images/icon-twitter.svg" alt="icon-twitter">
+                                <img class="social__icon" src="images/icon-pinterest.svg" alt="icon-pinterest">
+
+                            </div>
+                        </div>
+                        <div class="tooltip ">
+                            <div class="tooltiptext">SHARE
+                                <img class="social__icon tooltip--icon" src="images/icon-facebook.svg"
+                                    alt="icon-facebook">
+                                <img class="social__icon tooltip--icon" src="images/icon-twitter.svg"
+                                    alt="icon-twitter">
+                                <img class="social__icon tooltip--icon" src="images/icon-pinterest.svg"
+                                    alt="icon-pinterest">
+                            </div>
+                            <button class="btn contact__shared-icon" onclick="showSharedContent()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+
+                                    <path class="share-icon "
+                                        d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z">
+                                    </path>
+
+                                </svg>
+                            </button>
+                        </div>
+                        <!--  <p>Share</p> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

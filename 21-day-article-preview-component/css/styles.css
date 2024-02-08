@@ -10,12 +10,371 @@ Tabla de contenidos:
 
 /* ----- Fuente ----- */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
 /* ----- Variables ----- */
+* {
+    /* ### Colores primarios */
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
 
+    /*  ### Tipografia */
+    --Font-size: 13px;
 
+    --Family: "Manrope", sans-serif;
+    --Weights: 500, 700;
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+
+    font-family: var(--Family);
+    line-height: 1.5;
+    font-size: var(--Font-size);
+    font-weight: 400;
+    background-color: var(--Light-Grayish-Blue);
+    ;
+}
+
+#article-preview {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 21.5rem));
+    min-height: 90vh;
+    place-items: start;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card__header {
+
+    background-image: url(../images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 280px;
+    min-height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card__title {
+    padding: 30px 30px 0;
+    font-weight: 700;
+    font-size: 17.5px;
+}
+
+
+.card__description {
+    color: var(--Desaturated-Dark-Blue);
+    padding: 15px 55px 10px 30px;
+    font-weight: 500;
+}
+
+.contact {
+    padding: 0 30px 15px;
+    display: flex;
+    height: 70px;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact--bg-gray {
+    background: var(--Very-Dark-Grayish-Blue);
+}
+
+.contact__img {
+    border-radius: 50%;
+}
+
+.contact__description {
+    display: flex;
+    gap: 20px;
+}
+
+
+.contact__info p:first-of-type {
+    font-weight: 700;
+}
+
+.contact__date {
+    color: var(--Grayish-Blue);
+}
+
+.contact__shared {
+    display: flex;
+    gap: 20px;
+}
+
+
+.btn {
+    border: none;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    scale: 1.2;
+    background-color: var(--Grayish-Blue);
+}
+
+.btn:hover svg {
+    fill: white;
+
+}
+
+.btn:active {
+    scale: .99;
+}
+
+.btn svg {
+    fill: var(--Very-Dark-Grayish-Blue);
+
+}
+
+#slide {
+    transition: all 1s;
+}
+
+/* (B) HIDE */
+#slide.hide {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#slide-shared {
+    color: var(--Grayish-Blue);
+    transition: all 1s;
+}
+
+/* (B) HIDE */
+#slide-shared.hide {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.tooltiptext {
+    display: none;
+}
+
+.social__icon {
+    padding: 0 5px;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.social__icon:hover {
+    scale: 1.2;
+}
+
+.social__icon:active {
+    scale: .99;
+}
+
+.bg-Desaturated {
+    background-color: var(--Light-Grayish-Blue);
+}
+
+@media (min-width:375px) {
+    .card__header {
+
+        min-width: 330px;
+    }
+
+    .card__description {
+        padding: 15px 58px 10px 30px;
+    }
+
+    .social__icon {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {
+    .social__icon {
+        padding: 0 0px;
+    }
+
+    #article-preview {
+
+        grid-template-columns: repeat(auto-fit, min(100%, 52.5rem));
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .card__header {
+        background-size: cover;
+        background-position: left;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .card__title {
+        padding: 40px 40px 0;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .card__description {
+        font-weight: 500;
+        padding: 15px 80px 10px 40px;
+    }
+
+
+
+    .contact--bg-gray {
+        background: white;
+    }
+
+    .contact__description {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: translateX(0%) !important;
+        visibility: visible !important;
+    }
+
+    .contact__shared {
+        display: none !important;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        color: var(--Grayish-Blue);
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        padding: 20px 25PX;
+        z-index: 1;
+        bottom: 180%;
+        left: 50%;
+        margin-left: -135px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        letter-spacing: 2px;
+
+    }
+
+    .contact__shared-info {
+        background-color: var(--Very-Dark-Grayish-Blue);
+        display: flex;
+        gap: 20px;
+        letter-spacing: 2px;
+    }
+
+    #shared-text {
+        color: var(--Grayish-Blue) !important;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: 15px;
+        border-width: 15px;
+        border-style: solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+    }
+
+    .tooltip--show .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip:active .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip:focus .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .bg-Desaturated {
+        background-color: var(--Grayish-Blue);
+    }
+}
+
+@media (min-width:992px) {
+    .card__title {
+        font-size: 24px;
+    }
+
+    .tooltip .tooltiptext {
+        width: 200px;
+        margin-left: -135px;
+    }
+
+    .tooltip .tooltiptext::after {
+        margin-left: -15px;
+    }
+
+}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1440px) {}
+
+
+/* background */
+@media (max-width:425px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:1400px) {}
