@@ -21,7 +21,7 @@ Tabla de contenidos:
     --White: hsl(0, 0%, 100%);
 
     /* ### Tipografia */
-    --Font-size: 18px;
+    --Font-size: 15px;
     --Family: "League Spartan";
     --Weights--500: Medium;
     --Weights--700: bold;
@@ -34,7 +34,7 @@ Tabla de contenidos:
 /* ----------------------------- */
 body {
     font-family: var(--Family);
-    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop-2.svg);
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: left 0 top 0, right 0 bottom 0;
     background-color: var(--White);
@@ -74,7 +74,7 @@ main {
 
 
 .proof__header-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: var(--Weights--700);
     line-height: 0.9;
     color: var(--Very-Dark-Magenta);
@@ -100,14 +100,26 @@ main {
 
 
 .ratings__stars {
-    padding: 10px;
     border-radius: 10px;
     background-color: var(--Light-Grayish-Magenta);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+
+}
+
+.stars__container {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Light-Grayish-Magenta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     font-weight: 700;
     color: var(--Very-Dark-Magenta);
 
@@ -115,10 +127,14 @@ main {
 
 .stars {
     background-image: url(../images/icon-star.svg);
-    width: 85px;
+    background-repeat: no-repeat;
+    width: 20px;
     height: 15px;
-    margin-right: 20px;
 
+}
+
+.last--stars {
+    margin-right: 20px;
 }
 
 
@@ -134,11 +150,11 @@ main {
 
 .card {
     border-radius: 10px;
-    max-width: 360px;
+    max-width: 270px;
     max-height: 270px;
     background-color: var(--Very-Dark-Magenta);
     color: var(--White);
-    padding: 50px 40px;
+    padding: 30px 35px;
     margin: 0 auto;
 }
 
@@ -230,7 +246,13 @@ main {
 }
 
 @media (min-width:768px) {
+    body {
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    }
 
+    .proof__header-title {
+        font-size: 3.5rem;
+    }
 
 
     .ratings__stars {
@@ -251,7 +273,7 @@ main {
     .proof__header-title {
 
         min-width: 320px;
-        max-width: 450px;
+        max-width: 400px;
     }
 
     .proof__header-subTitle {
@@ -280,30 +302,29 @@ main {
 @media (min-width:1200px) {}
 
 @media (min-width:1400px) {
+    .card {
+        border-radius: 10px;
+        max-width: 360px;
+        max-height: 270px;
+        background-color: var(--Very-Dark-Magenta);
+        color: var(--White);
+        padding: 50px 40px;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .proof__header-title {
+        font-size: 4rem;
+        min-width: 320px;
+        max-width: 450px;
+    }
+
     .ratings {
         display: flex;
         padding-left: 70px;
         justify-content: start;
-    }
-}
-
-
-
-/* background */
-@media (max-width:425px) {
-    body {
-        background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mbg-pattern-top-mobile.svg);
-    }
-}
-
-@media (max-width:768px) {
-    body {
-        background-image: url(../images/bg-pattern-top-tablet.svg), url(../images/bg-pattern-bottom-tablet.svg);
-    }
-}
-
-@media (max-width:1400px) {
-    body {
-        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     }
 }
