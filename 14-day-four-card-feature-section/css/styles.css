@@ -119,9 +119,9 @@ main {
 
 }
 
-.card__title {}
-
-.card__subTitle {}
+.card__title {
+    color: var(--Grayish-Blue);
+}
 
 .card__description {
     color: var(--Grayish-Blue);
