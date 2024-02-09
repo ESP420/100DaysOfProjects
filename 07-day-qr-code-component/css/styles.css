@@ -44,7 +44,7 @@ Tabla de contenidos:
     justify-content: center;
     align-items: center;
     font-size: var(--Font-size-paragraph);
-    background-color: var(--Soft-blue);
+    background-color: hsl(212, 45%, 89%);
 
 }
 

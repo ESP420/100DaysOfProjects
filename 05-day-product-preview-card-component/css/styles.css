@@ -8,8 +8,8 @@ Tabla de contenidos:
 
 
 /* ----- Fuente ----- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;200;300;400;500;600;700&display=swap');
 
 
 /* ----- Variables ----- */
@@ -39,20 +39,27 @@ body {
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
-	font-size: 14px;
+	font-size: 16px;
 	background-color: var(--cream-color);
 }
 
 .btn {
+	position: relative;
 	justify-self: center;
 	width: 100%;
 	border: none;
-	padding: 15px;
-	border-radius: 5px;
+	padding: 18px;
+	border-radius: 10px;
 	pointer-events: auto;
 	cursor: pointer;
 
 
+}
+
+.img-cart {
+	position: absolute;
+	top: 33%;
+	left: 25%;
 }
 
 .btn:hover {
@@ -79,23 +86,25 @@ body {
 	border-top-left-radius: 10px;
 	grid-area: header;
 	background-image: url('../images/image-product-mobile.jpg');
-	height: 200px;
+	height: 250px;
 	background-repeat: no-repeat;
 	background-size: 100%;
 
 }
 
 .card-body {
-	padding: 30px;
+	padding: 25px 40px;
 	grid-area: body;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 25px;
 
 
 }
 
 .type {
+	font-weight: 500;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: var(--dark-grayish-blue);
 }
@@ -107,8 +116,9 @@ body {
 }
 
 .description {
-
-	line-height: 1.6;
+	font-weight: 600;
+	line-height: 1.8;
+	padding-right: 10px;
 	color: var(--dark-grayish-blue);
 }
 
@@ -123,8 +133,8 @@ body {
 }
 
 .price {
-
-	font-size: xx-large;
+	font-family: 'Fraunces', 'sans-serif';
+	font-size: 2rem;
 	color: var(--dark-cyan);
 	font-weight: 700;
 }
@@ -133,12 +143,14 @@ body {
 	align-self: center;
 	text-decoration: line-through;
 	color: var(--dark-grayish-blue);
+	font-weight: 500;
 }
 
 .add-card {
 	border: none;
 	background-color: var(--dark-cyan);
-	;
+	font-weight: 500;
+	padding-left: 25px;
 	color: var(--white-color);
 
 
@@ -154,10 +166,14 @@ body {
 
 @media (min-width:375px) {
 	.card {
-		grid-template-columns: 370px;
+		grid-template-columns: 350px;
 	}
 
-	.card-header {
+	.title {
+		font-size: 1.8rem;
+	}
+
+	d-header {
 		height: 250px;
 	}
 }
@@ -169,17 +185,19 @@ body {
 @media (min-width:576px) {}
 
 @media (min-width:768px) {
-
+	.title {
+		font-size: 2.4rem;
+	}
 
 	.card {
 		width: 700;
-		grid-template-columns: 300px 300px;
-		border-radius: 25px;
+		grid-template-columns: 376px 376px;
+		border-radius: 10px;
 	}
 
 	.card-header {
-		height: 425px;
-		width: 300px;
+		height: 560px;
+		width: 376px;
 		border-bottom-left-radius: 10px;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 0px;
@@ -190,11 +208,12 @@ body {
 	}
 
 	.img {
-		height: 400px;
-		width: 300px;
+		height: 560px;
+		width: 376px;
 	}
 
 	.card-body {
+		padding: 45px;
 		grid-area: body;
 		grid-column-start: 2;
 		grid-column-end: 2;

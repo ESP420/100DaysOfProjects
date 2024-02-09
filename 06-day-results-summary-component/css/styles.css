@@ -52,22 +52,26 @@ Tabla de contenidos:
 /* ----------------------------- */
 body {
     font-family: 'Hanken Grotesk', 'sans-serif';
+
+    font-size: 16px;
+    background-color: var(--Pale-blue);
+    min-height: 100vh;
     display: flex;
-    height: 100vh;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    background-color: var(--Pale-blue);
 
 
+}
+
+#results-summary-card {
+    display: flex;
 }
 
 .btn {
     justify-self: center;
     width: 100%;
     border: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
     pointer-events: auto;
     cursor: pointer;
@@ -90,23 +94,21 @@ img {
 
 .card {
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: 280px;
     grid-template-areas: 'header' 'body';
     background-color: var(--White);
     border-radius: 25px;
-
+    margin: 30px auto;
     -webkit-box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
     -moz-box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
     box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.29);
-
 
 }
 
 .card-header {
     background: linear-gradient(0deg, var(--Light-royal-blue-bg) 0%, var(--Light-slate-blue-bg) 100%);
     border-radius: 25px;
-    height: 450px;
-    padding: 40px;
+    padding: 40px 30px;
     color: var(--White);
     display: flex;
     flex-direction: column;
@@ -117,16 +119,15 @@ img {
 }
 
 .card-header .title {
-    font-size: x-large;
+    font-size: 20px;
     color: var(--Light-lavender);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .donut {
-    margin: 10px;
     border-radius: 50%;
-    height: 240px;
-    width: 220px;
+    height: 180px;
+    width: 180px;
     background: linear-gradient(0deg, var(--Persian-blue-circle) 0%, var(--Violet-blue-circle) 100%);
     display: flex;
     align-items: center;
@@ -145,25 +146,32 @@ img {
 }
 
 .sub-title {
-    font-size: xx-large;
+    font-size: 25px;
     font-weight: 800;
 }
 
 .description {
     text-align: center;
-    font-size: large;
-    padding: 0 30px;
+    font-size: 18px;
+    padding: 0 10px;
     color: var(--Light-lavender);
 }
 
 .card-body {
-    height: 450px;
     border-bottom-left-radius: 15px;
-    padding: 40px;
+    padding: 40px 30px;
     border-bottom-right-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+}
+
+.alert-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
 }
 
@@ -210,10 +218,10 @@ img {
 }
 
 .next-button {
+    margin: 10px 0;
     background-color: var(--Dark-gray-blue);
     color: var(--White);
     border-radius: 30px;
-    margin-top: 25px;
     font-size: large;
 }
 
@@ -223,8 +231,8 @@ img {
 }
 
 .alert {
-    padding: 20px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .alert-icon {
@@ -247,15 +255,17 @@ img {
     background-color: var(--bg-cobalt-blue);
 }
 
-@media (min-width:375px) {}
-
-.card {
-    grid-template-columns: 370px;
+@media (min-width:375px) {
+    .card {
+        grid-template-columns: 330px;
+    }
 }
+
+
 
 @media (min-width:425px) {
     .card {
-        grid-template-columns: 400px;
+        grid-template-columns: 330px;
     }
 }
 
@@ -263,21 +273,16 @@ img {
 @media (min-width:576px) {}
 
 @media (min-width:768px) {
-    #body {
-        height: 100vh;
-    }
+
 
     .card {
-        grid-template-columns: 400px 400px;
+        grid-template-columns: 330px 330px;
         grid-template-areas: 'header body';
     }
 
-    .card-header {
-        height: 450px;
-    }
+    .card-header {}
 
     .card-body {
-        height: 450px;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     }
