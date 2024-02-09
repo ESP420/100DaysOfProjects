@@ -54,7 +54,7 @@ body {
 
 .card {
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
     background: linear-gradient(hsl(213, 19%, 14%), hsl(216, 12%, 12%));
 }
 
