@@ -82,7 +82,7 @@ main {
     width: 300px;
     margin: 40px auto;
     background-color: var(--White);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .card {
@@ -124,7 +124,16 @@ main {
     font-family: var(--Family-2);
 }
 
+.preparation ul {
+    font-weight: bold;
+    color: var(--Dark-Raspberry)
+}
 
+
+.preparation ul>li span {
+    font-weight: normal;
+    color: var(--Wenge-Brown)
+}
 
 .ingredients__title,
 .instructions__title,
@@ -134,6 +143,16 @@ main {
     color: var(--Nutmeg);
 }
 
+.ingredients ul {
+    font-weight: bold;
+    color: var(--Nutmeg);
+}
+
+
+.ingredients ul>li span {
+    font-weight: normal;
+    color: var(--Wenge-Brown)
+}
 
 .instructions ul {
     list-style-type: decimal;
