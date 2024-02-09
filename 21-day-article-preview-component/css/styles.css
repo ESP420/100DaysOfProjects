@@ -206,7 +206,7 @@ body {
 @media (min-width:375px) {
     .card__header {
 
-        min-width: 330px;
+        min-width: 320px;
     }
 
     .card__description {
@@ -261,7 +261,7 @@ body {
 
     .card__description {
         font-weight: 500;
-        padding: 15px 80px 10px 40px;
+        padding: 15px 90px 10px 40px;
     }
 
 
@@ -348,6 +348,7 @@ body {
     .bg-Desaturated {
         background-color: var(--Grayish-Blue);
     }
+
 }
 
 @media (min-width:992px) {
