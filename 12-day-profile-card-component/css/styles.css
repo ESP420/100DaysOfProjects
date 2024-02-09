@@ -122,6 +122,10 @@ body {
     padding: 20px;
 }
 
+.stats {
+    text-align: center;
+}
+
 .stats__value {
     font-size: 18px;
     font-weight: 700;
