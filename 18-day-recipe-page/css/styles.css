@@ -94,7 +94,7 @@ main {
     background-size: contain;
     width: 100%;
     margin: 0 auto;
-    height: 140px;
+    height: 150px;
 }
 
 .card__body {
@@ -109,7 +109,7 @@ main {
     font-weight: 400;
     color: var(--Dark-Charcoal);
     padding-top: 30px;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .preparation {
@@ -192,22 +192,22 @@ main {
 
 @media (min-width:375px) {
     #recipe-page {
-        width: 350px;
+        width: 100vw;
     }
 
     .card__img {
-        height: 160px;
+        height: 180px;
     }
 }
 
 
 @media (min-width:425px) {
     #recipe-page {
-        width: 400px;
+        width: 100vw;
     }
 
     .card__img {
-        height: 185px;
+        height: 195px;
     }
 }
 
@@ -216,6 +216,7 @@ main {
 @media (min-width:576px) {
     #recipe-page {
         width: 550px;
+        margin: 40px auto;
     }
 
     .card__img {
@@ -232,10 +233,15 @@ main {
         border-radius: 15px;
     }
 
+    .card__title {
+        font-size: 2.5rem;
+    }
+
     .card__body {
         padding: 0 0;
         gap: 30px;
     }
+
 }
 
 
