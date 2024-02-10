@@ -79,8 +79,7 @@ main {
 
 
 #recipe-page {
-    width: 300px;
-    margin: 40px auto;
+    width: 100vw;
     background-color: var(--White);
     border-radius: 15px;
 }
@@ -243,8 +242,9 @@ main {
 @media (min-width:768px) {
     #recipe-page {
         width: 730px;
-    }
 
+        margin: 40px auto;
+    }
 
     .card__img {
         height: 300px;
