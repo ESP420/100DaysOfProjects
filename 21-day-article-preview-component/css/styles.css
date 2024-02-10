@@ -67,9 +67,11 @@ body {
     min-height: 180px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    filter: brightness(1.1);
 }
 
 .card__title {
+    color: var(--Very-Dark-Grayish-Blue);
     padding: 30px 30px 0;
     font-weight: 700;
     font-size: 17.5px;
@@ -83,9 +85,8 @@ body {
 }
 
 .contact {
-    padding: 0 30px 15px;
+    padding: 10px 30px 15px;
     display: flex;
-    height: 70px;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
@@ -206,7 +207,7 @@ body {
 @media (min-width:375px) {
     .card__header {
 
-        min-width: 320px;
+        min-width: 273px;
     }
 
     .card__description {
@@ -235,7 +236,7 @@ body {
 
     #article-preview {
 
-        grid-template-columns: repeat(auto-fit, min(100%, 52.5rem));
+        grid-template-columns: repeat(auto-fit, min(100%, 45rem));
     }
 
     .card {
@@ -254,14 +255,14 @@ body {
     }
 
     .card__title {
-        padding: 40px 40px 0;
+        padding: 30px 40px 0;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .card__description {
         font-weight: 500;
-        padding: 15px 90px 10px 40px;
+        padding: 15px 40px 10px 40px;
     }
 
 
@@ -353,7 +354,7 @@ body {
 
 @media (min-width:992px) {
     .card__title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .tooltip .tooltiptext {
