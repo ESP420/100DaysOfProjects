@@ -23,7 +23,64 @@
 <body>
 
     <!-- Marcado HTML -->
+    <main>
+        <section class="sign-up">
+            <div class="card">
+                <div class="card__body">
+                    <div class="left__container">
+                        <h1 class="card__title">Learn to code by watching others</h1>
 
+                        <p class="card__description">See how experienced developers solve problems in real-time.
+                            Watching scripted tutorials is
+                            great, but understanding how developers think is invaluable.</p>
+
+
+                    </div>
+                    <div class="right__container">
+
+                        <button class="top__btn"><span class="ls-2">Try it free 7 days</span> <span
+                                class="font__medium">then $20/mo.
+                                thereafter</span></button>
+                        <form class="card__form" onsubmit="submitForm(event)" method="post">
+                            <div class="input__container">
+                                <input class="form__input" type="text" id="first-name" placeholder="First Name" />
+                                <small id="first-name-error" class="hidden error-msg">First Name cannot be
+                                    empty</small>
+                                <img id="first-name-error-icon" class=" hidden input__error-icon hidden"
+                                    src="images/icon-error.svg" alt="error icon">
+                            </div>
+                            <div class="input__container">
+                                <input class="form__input" type="text" id="last-name" placeholder="Last Name" />
+                                <small id="last-name-error" class="hidden error-msg">Last Name cannot be empty</small>
+                                <img id="last-name-error-icon" class=" hidden input__error-icon hidden"
+                                    src="images/icon-error.svg" alt="error icon">
+                            </div>
+                            <div class="input__container">
+                                <input class="form__input" type="text" id="email-address" placeholder="Email Address" />
+                                <small id="email-address-error" class="hidden error-msg">Look like this is not an
+                                    email</small>
+                                <img id="email-address-error-icon" class=" hidden input__error-icon hidden"
+                                    src="images/icon-error.svg" alt="error icon">
+                            </div>
+                            <div class="input__container">
+                                <input class="form__input" type="password" id="password-input" placeholder="Password" />
+                                <small id="password-error" class="hidden error-msg">Password cannot be empty</small>
+                                <img id="password-error-icon" class=" hidden input__error-icon hidden"
+                                    src="images/icon-error.svg" alt="error icon">
+                            </div>
+                            <button type="submit" class="btn"> Claim your free trial</button>
+
+
+                            <p class="small">By clicking the button, you are agreeing to our <span class="color--red">
+                                    Terms and
+                                    Services</span></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

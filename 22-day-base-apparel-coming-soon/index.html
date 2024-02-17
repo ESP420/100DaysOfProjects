@@ -23,7 +23,42 @@
 <body>
 
     <!-- Marcado HTML -->
+    <main>
+        <section class="comming-page">
+            <div class="card">
+                <div class="card__header card__header--mobile"><img class="card__logo" src="images/logo.svg"
+                        alt="Logotipo Base Apparel">
+                </div>
+                <div class="card__img">
+                </div>
+                <div class="card__body">
+                    <div class="card__header card__header--desktop"><img src="images/logo.svg"
+                            alt="Logotipo Base Apparel">
+                    </div>
+                    <div class="card__title-container">
+                        <p class="card__title card__title--weight-300 card__title--color">We're</p>
+                        <p class="card__title card__title--weight-600">coming</p>
+                        <p class="card__title card__title--weight-600">soon</h1>
+                    </div>
+                    <p class="card__description"> Hello fellow shoppers! We're currently building our new fashion store.
+                        Add your email below to
+                        stay up-to-date with announcements and our launch deals.</p>
 
+                    <div class="input__container">
+                        <form onsubmit="sendEmail(event)" method="post">
+                            <input id="email-input" class="input__field" type="text" placeholder="Email Address">
+
+                            <img id="error-icon" class="input__error-icon hidden" src="images/icon-error.svg"
+                                alt="error icon">
+                            <small id="error-message" class="input__error-message hidden">Please provide a valid email
+                                address</small>
+                            <button class="btn" type="submit"><img src="images/icon-arrow.svg" alt="arrow"></button>
+                        </form>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

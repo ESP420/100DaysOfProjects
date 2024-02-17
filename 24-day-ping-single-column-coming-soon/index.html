@@ -23,7 +23,45 @@
 <body>
 
     <!-- Marcado HTML -->
+    <main>
+        <section id="ping-single-column">
+            <div class="card">
+                <div class="card__header">
+                    <img class="card__logo" src="images/logo.svg" alt="Logo de la página" />
+                    <p class="card__title"><span class="card_title--gray">We are launching</span> soon! </p>
 
+                    <p class="card__subtitle">Subscribe and get notified</p>
+                    <form novalidate class="card__form" onsubmit="sendEmail(event)" method="post">
+                        <input id="email-input" class="card__input" type="text" placeholder="Your email address..."
+                            required>
+
+                        <button type="submit" class="card__button">Notify Me</button>
+                    </form>
+                    <small id="error-message" class="input__error-message hidden">Please provide a valid email
+                        address</small>
+                </div>
+                <div class="card__body">
+
+                    <img src="images/illustration-dashboard.png" alt="illustration-dashboard" class="card__img" />
+                </div>
+                <div class="card__footer">
+                    <div class="social">
+                        <button class="social__btn" type="button">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                        <button class="social__btn" type="button">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                        <button class="social__btn" type="button">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                    </div>
+                    <p class="text__footer">© Copyright Ping. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

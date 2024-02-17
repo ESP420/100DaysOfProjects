@@ -11,12 +11,223 @@ Tabla de contenidos:
 /* ----- Fuente ----- */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 /* ----- Variables ----- */
-
-
-
+* {
+    /* ### Colores primarios */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --gray-white: hsl(0, 0%, 100%, 0.4);
+    /*
+### Neutrales */
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+    /*  ### Tipografia */
+    --Font-size: 13px;
+    --Family: "Barlow Semi Condensed", sans-serif;
+    --Weights: 500, 700;
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+
+    font-family: var(--Family);
+    line-height: 1.5;
+    font-size: var(--Font-size);
+    font-weight: 400;
+    background-color: var(--Light_grayish_blue)
+}
+
+main {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 73.5rem));
+    min-height: 100vh;
+}
+
+#testimonials-grid {
+    display: grid;
+    grid-template-areas:
+        "one" "two" "four"
+        "five"
+        "three";
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 30px;
+    background-color: red;
+}
+
+.card--one {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-color: var(--Moderate-violet);
+    background-repeat: no-repeat;
+    background-position: 80% top;
+    grid-area: one;
+}
+
+.card--two {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: two;
+}
+
+.card--three {
+    background-color: var(--White);
+    grid-area: three;
+}
+
+.card--four {
+    background-color: var(--White);
+    grid-area: four;
+}
+
+.card--five {
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: five;
+}
+
+.card__header {
+    display: flex;
+}
+
+.card__img {
+    border-radius: 50%;
+    width: 35px;
+    border: 2px solid transparent;
+}
+
+.p--left-20 {
+    padding-left: 20px;
+}
+
+.border--purple {
+    border: 2px solid #a775f2;
+}
+
+.card__title {
+    color: var(--Light_grayish_blue);
+    font-weight: 600;
+}
+
+.card__title--dark {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.card__subtitle {
+    color: var(--gray-white);
+    font-weight: 500;
+}
+
+.card__subtitle--dark {
+    color: var(--Very-dark-blackish-blue);
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.card__description-one {
+    line-height: 25px;
+    font-size: 20px;
+    color: var(--Light_grayish_blue);
+    font-weight: 600;
+}
+
+.card__description-two {
+    color: var(--Light_grayish_blue);
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.card__description-two--dark {
+    color: var(--Very-dark-grayish-blue);
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.card__description-one--dark {
+    color: var(--Very-dark-grayish-blue);
+
+}
+
+
+
+@media (min-width:375px) {}
+
+
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {}
+
+@media (min-width:992px) {
+    #testimonials-grid {
+        display: grid;
+        grid-template-areas:
+            "four two"
+            "three three"
+            "one five";
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .card--one {
+
+        background-position: 80% top;
+    }
+}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {
+    #testimonials-grid {
+        display: grid;
+        grid-template-areas:
+            "one  one one one  one one two two three three"
+            "four four five  five five five five five three three";
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .w--small-card {
+        max-width: 185px;
+    }
+
+    .w--big-card {
+        max-width: 470px;
+    }
+
+    .w--big-card-2 {
+        max-width: 470px;
+    }
+
+    .w--big-card-3 {
+        max-width: 480px;
+    }
+}
+
+@media (min-width:1440px) {}
+
+
+/* background */
+@media (max-width:425px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:1400px) {}

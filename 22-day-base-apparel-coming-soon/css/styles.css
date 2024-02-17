@@ -10,12 +10,265 @@ Tabla de contenidos:
 
 /* ----- Fuente ----- */
 
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 
 /* ----- Variables ----- */
+* {
+    /* ### Colores primarios */
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
 
-
+    /* ### Colores neutrales */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /* 
+    ### Colores gradientes
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+    */
+    /*  ### Tipografia */
+    --Font-size: 16px;
+    --Family: "Josefin Sans", sans-serif;
+    --Weights: 300, 400, 600;
+}
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
+body {
+    font-family: var(--Family);
+    line-height: 1.5;
+    font-size: var(--Font-size);
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 110px 250px auto;
+    height: 100vh;
+}
+
+
+
+.card__header {
+    padding: 40px;
+}
+
+
+.card__img {
+    background-image: url(../images/hero-mobile.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.card__body {
+    grid-area: "body";
+    background: url(../images/bg-pattern-desktop.svg) no-repeat, linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title-container {
+    padding-top: 40px;
+}
+
+.card__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: -20px;
+    letter-spacing: 10px;
+    color: var(--Dark-Grayish-Red);
+}
+
+.card__title--color {
+    color: var(--Desaturated-Red);
+}
+
+.card__title--weight-300 {
+    font-weight: 300;
+}
+
+.card__title--weight-600 {
+    font-weight: 600;
+}
+
+.card__header--mobile {
+    display: block;
+}
+
+.card__header--desktop {
+    display: none;
+}
+
+.card__description {
+    text-align: center;
+    padding: 20px 40px;
+    color: var(--Desaturated-Red);
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 17px 35px;
+    border-radius: 30px;
+    pointer-events: auto;
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.input__error-message {
+    color: var(--Soft-Red);
+}
+
+.input__error-icon {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    border: none;
+    padding: 17px 35px;
+    border-radius: 30px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn:hover {
+    -webkit-box-shadow: -1px 5px 15 0px rgba(0, 0, 0, 0.51);
+    box-shadow: -1px 5px 15px 0px rgba(0, 0, 0, 0.51);
+}
+
+.btn:hover {
+    background: hsl(0, 80%, 86%);
+    scale: 1.02;
+
+}
+
+.btn:active {
+    scale: .99;
+}
+
+.input__container {
+    position: relative;
+    max-width: 330px;
+    place-self: center;
+}
+
+.input__field {
+    all: unset;
+    border: 1px solid var(--Desaturated-Red);
+    border-radius: 30px;
+    min-width: 300px;
+    padding: 1rem 0;
+    overflow: hidden;
+    background-color: transparent;
+    font-family: var(--body-font);
+    margin: 0 auto;
+}
+
+input[type=text] {
+    padding-left: 25px;
+    margin: 0 auto;
+}
+
+
+::placeholder {
+
+    color: var(--Desaturated-Red);
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: var(--Desaturated-Red);
+}
+
+@media (min-width:375px) {
+    .input__container {
+        min-width: 370px;
+    }
+
+    .input__field {
+        min-width: 340px;
+    }
+}
+
+
+@media (min-width:425px) {}
+
+/* *********---- TABLET ----********* */
+
+@media (min-width:576px) {}
+
+
+@media (min-width:768px) {
+    .card {
+        grid-template-columns: 55% 45%;
+        grid-template-rows: auto;
+    }
+
+    .card__header--desktop {
+        margin: 0 auto;
+        padding: 80px 0;
+        width: 430px;
+    }
+
+    .card__body {
+        height: 100vh;
+    }
+
+    .card__img {
+        background-image: url(../images/hero-desktop.jpg);
+        background-size: cover;
+        grid-column: 2;
+        grid-row: 3/1;
+    }
+
+    .card__header--mobile {
+        display: none;
+    }
+
+    .card__header--desktop {
+        display: block;
+    }
+
+    .card__title {
+        text-align: left;
+        margin: 0 auto;
+        width: 430px;
+        font-size: 4.5rem;
+        margin-bottom: -30px;
+        letter-spacing: 15px;
+    }
+
+    .card__description {
+        margin: 0 auto;
+        text-align: left;
+        width: 430px;
+        padding: 40px 0;
+    }
+
+    .input__container {
+        min-width: 430px;
+    }
+
+    .input__field {
+        min-width: 400px;
+    }
+}
+
+@media (min-width:992px) {}
+
+/* *********---- Desktop ----********* */
+@media (min-width:1200px) {}
+
+@media (min-width:1440px) {}
