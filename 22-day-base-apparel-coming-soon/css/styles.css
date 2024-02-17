@@ -194,11 +194,11 @@ input[type=text] {
 
 @media (min-width:375px) {
     .input__container {
-        min-width: 370px;
+        min-width: 330px;
     }
 
     .input__field {
-        min-width: 340px;
+        min-width: 300px;
     }
 }
 
