@@ -27,6 +27,16 @@ html {
   margin: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /**
    * Render the `main` element consistently in IE.
    */
@@ -42,7 +52,6 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
