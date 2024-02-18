@@ -310,6 +310,7 @@ footer {
     .snippets__container {
         display: flex;
         flex-direction: column;
+        justify-self: center;
         gap: 50px;
     }
 
@@ -340,7 +341,6 @@ footer {
 
     .snippets__container-text {
         display: flex;
-        justify-content: center;
 
     }
 
@@ -438,6 +438,12 @@ footer {
 }
 
 @media (min-width:992px) {
+    .snippets__img {
+        width: 710px;
+        height: 580px;
+        background-size: contain;
+    }
+
     .clipboard__img {
         background-image: url(../images/image-devices.png);
         background-repeat: no-repeat;
@@ -474,7 +480,7 @@ footer {
     }
 
     .snippets__content {
-        padding-top: 50px;
+        padding-top: 20px;
     }
 
     .snippets__sub-description {
