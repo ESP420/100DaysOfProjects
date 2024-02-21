@@ -1,4 +1,3 @@
-inputEmail = Document.getelemen
 function sendEmail(event) {
     event.preventDefault();
 
